@@ -3,10 +3,17 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./shared/header/header.component";
 import { WhatsappButtonComponent } from './shared/whatsappButton/whatsappButton.component';
 import { ServicioTecnicoComponent } from './pages/servicio-tecnico/servicio-tecnico.component';
+import { AccesoriosComponent } from "./pages/accesorios/accesorios.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, WhatsappButtonComponent, ServicioTecnicoComponent],
+  imports: [
+    RouterOutlet, 
+    HeaderComponent, 
+    WhatsappButtonComponent, 
+    ServicioTecnicoComponent, 
+    AccesoriosComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
