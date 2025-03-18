@@ -1,0 +1,44 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  @font-face {
+    font-family: 'Stratos';
+    src: url('./app/assets//fonts/Stratos-Regular.woff2') format('woff2'),
+         url('./app/assets//fonts/Stratos-Regular.woff') format('woff');
+         font-weight: normal;
+         font-style: normal;
+  }
+
+  body {
+    font-family: 'Stratos', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    min-height: 100vh;
+    background: linear-gradient(0deg, rgba(36,18,34,1) 8%, rgba(72,41,110,1) 42%, rgb(91, 50, 124) 100%) fixed;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+  
+  .full-screen-preview {
+    background: #fff;
+  }
+  
+  /* Utility classes */
+  .is-hidden {
+    display: none !important;
+  }
+
+  :root{
+    --pc-color: #2F283A;
+    --sc-color: #ff9924;
+    --font-color: #fff;
+  }
