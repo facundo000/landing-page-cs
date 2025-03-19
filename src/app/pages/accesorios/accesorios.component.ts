@@ -13,7 +13,7 @@ import { GalleriaModule } from 'primeng/galleria';
          <ng-template pTemplate="item" let-item>
              <img [src]="item.itemImageSrc" class="gallery-image" />
          </ng-template>
-         <ng-template pTemplate="thumbnail" let-item >
+         <ng-template pTemplate="thumbnail" let-item>
              <img [src]="item.thumbnailImageSrc" class="gallery-thumbnail"/>
          </ng-template>
      </p-galleria>
