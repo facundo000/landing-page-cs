@@ -9,73 +9,78 @@ import { GalleriaModule } from 'primeng/galleria';
   <section>
     <h2>Accesorios</h2>
     <div class="card">
-     <p-galleria [value]="images" [responsiveOptions]="responsiveOptions"  [numVisible]="5">
+     <p-galleria [value]="images()" [responsiveOptions]="responsiveOptions" 
+       [containerStyle]="{ 'max-width': '100%' }" [numVisible]="5"
+       [showThumbnails]="true" [showIndicators]="true" [circular]="true">
          <ng-template pTemplate="item" let-item>
-             <img [src]="item.itemImageSrc" class="gallery-image" />
+          <div class="image-container">  
+            <img [src]="item.itemImageSrc" [alt]="item.alt" class="gallery-image" loading="lazy"/>
+            <h4  class="image-title">{{item.title}}</h4>
+          </div>
          </ng-template>
          <ng-template pTemplate="thumbnail" let-item>
-             <img [src]="item.thumbnailImageSrc" class="gallery-thumbnail"/>
+             <img [src]="item.thumbnailImageSrc" [alt]="item.alt" class="gallery-thumbnail" loading="lazy"/>
          </ng-template>
-     </p-galleria>
+     </p-galleria>     
     </div>
   </section>
   `,
   styleUrl: './accesorios.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AccesoriosComponent  implements OnInit {
-  images: any[] | undefined;
-  // images = model([]);
+export class AccesoriosComponent {
+  images = model<any[]>([]);
 
-  responsiveOptions: any[] | undefined;
+  responsiveOptions = [
+    {
+      breakpoint: '1400px',
+      numVisible: 4,
+      numScroll: 2
+    },
+    {
+      breakpoint: '1024px',
+      numVisible: 3,
+      numScroll: 2
+    },
+    {
+      breakpoint: '768px',
+      numVisible: 2,
+      numScroll: 1
+    },
+    {
+      breakpoint: '480px',
+      numVisible: 1,
+      numScroll: 1
+    }
+  ];
 
-  // constructor(private photoService: PhotoService) {}
-
-  ngOnInit() {
-    
-    this.images = [
+  constructor() {
+    this.images.set([
       {
-        itemImageSrc: '/img/caousel-3.png',
-        thumbnailImageSrc: '/img/caousel-3.png',
-        alt: 'Descripción de accesorio 1',
-        title: 'Accesorio 1'
+        itemImageSrc: '/img/funda-iphone.webp',
+        thumbnailImageSrc: '/img/funda-iphone.webp',
+        alt: 'Accesorio deportivo',
+        title: 'Funda iphone'
       },
       {
-        itemImageSrc: '/img/carousel-1.webp',
-        thumbnailImageSrc: '/img/carousel-1.webp',
-        alt: 'Descripción de accesorio 2',
-        title: 'Accesorio 2'
+        itemImageSrc: '/img/funda-cel.webp',
+        thumbnailImageSrc: '/img/funda-cel.webp',
+        alt: 'Kit completo',
+        title: 'Funda de Samsung'
       },
       {
-        itemImageSrc: '/img/carousel-1.webp',
-        thumbnailImageSrc: '/img/carousel-1.webp',
-        alt: 'Descripción de accesorio 2',
-        title: 'Accesorio 2'
+        itemImageSrc: '/img/accesorio-p-celular.webp',
+        thumbnailImageSrc: '/img/accesorio-p-celular.webp',
+        alt: 'Accesorio deportivo',
+        title: 'Soporte para celular'
       },
       {
-        itemImageSrc: '/img/caousel-3.png',
-        thumbnailImageSrc: '/img/caousel-3.png',
-        alt: 'Descripción de accesorio 1',
-        title: 'Accesorio 1'
+        itemImageSrc: '/img/protector-pantalla.webp',
+        thumbnailImageSrc: '/img/protector-pantalla.webp',
+        alt: 'Kit completo',
+        title: 'Vidrio Templado'
       },
-      {
-        itemImageSrc: '/img/caousel-3.png',
-        thumbnailImageSrc: '/img/caousel-3.png',
-        alt: 'Descripción de accesorio 1',
-        title: 'Accesorio 1'
-      },
-      // Agrega más imágenes según necesites
-    ];
-    
-    this.responsiveOptions = [
-        {
-            breakpoint: '10px',
-            numVisible: 4
-        },
-        {
-            breakpoint: '20px',
-            numVisible: 1
-        }
-    ];
+    ]);
   }
+
  }
