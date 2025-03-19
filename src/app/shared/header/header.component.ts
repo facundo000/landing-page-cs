@@ -10,13 +10,13 @@ import { CommonModule } from '@angular/common';
       <div class="top-bar">
         <div class="contact-info">
           <a href="tel:123-456-7890" class="info-item">
-            <span class="icon">📞</span> 123-456-7890
+            <span class="icon"> <i class="i-phone"></i></span> 123-456-7890
           </a>
           <a href="https://instagram.com" target="_blank" class="info-item">
-            <span class="icon">📸</span> instagram
+            <span class="icon"><i class="i-instagram"></i></span> instagram
           </a>
           <span class="info-item">
-            <span class="icon">🕒</span> Lun - Vier 8am - 17pm, Sáb 8am - 13pm
+            <span class="icon"><i class="i-clock"></i></span> Lun - Vier 8am - 17pm, Sáb 8am - 13pm
           </span>
         </div>
       </div>
@@ -86,6 +86,33 @@ import { CommonModule } from '@angular/common';
       width: 100%;
     }
 
+    .icon {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+    }
+
+    .icon i {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .i-phone {
+      background-image: url('/icons/phone-i.svg');
+    }
+
+    .i-instagram {
+      background-image: url('/icons/instagram-i.svg');
+    }
+
+    .i-clock {
+      background-image: url('/icons/time-svgrepo-com.svg');
+    }
+
     .top-bar {      
       padding: 8px 0;
       border-bottom: 1px solid #eee;
@@ -113,7 +140,7 @@ import { CommonModule } from '@angular/common';
     }
 
     .info-item:hover {
-      color: #333;
+      color: var(--sc-color);
     }
 
     .main-nav {

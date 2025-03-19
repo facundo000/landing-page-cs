@@ -1,0 +1,126 @@
+:host {
+  display: block;
+  padding: 2rem 1rem;
+}
+
+/* Grid responsivo */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Tarjeta */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--pc-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(232, 28, 255, 0.1);
+  border: 1px solid rgba(232, 28, 255, 0.3);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(232, 28, 255, 0.2);
+}
+
+/* Estrellas */
+.stars {
+  display: flex;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.star {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #ffd700;
+  transition: transform 0.3s ease;  
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
+
+/* Textos */
+.infos {
+  flex-grow: 1;
+}
+
+.date-time {
+  color: #e81cff;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: #e0e0e0;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.author a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  transition: color 0.3s ease;
+}
+
+.author a:hover {
+  color: #ffa640;
+  text-shadow: 0 0 15px rgba(255, 166, 64, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .star {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+/* Efecto neon para consistencia */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, #e81cff, #ffa640);
+  z-index: -1;
+  border-radius: 12px;
+  opacity: 0.3;
+  animation: neon-pulse 3s infinite;
+}
+
+@keyframes neon-pulse {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.4; }
+}

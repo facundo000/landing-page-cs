@@ -5,6 +5,8 @@ import { WhatsappButtonComponent } from './shared/whatsappButton/whatsappButton.
 import { ServicioTecnicoComponent } from './pages/servicio-tecnico/servicio-tecnico.component';
 import { AccesoriosComponent } from "./pages/accesorios/accesorios.component";
 import { InsumosInformaticosComponent } from "./pages/insumos-informaticos/insumos-informaticos.component";
+import { ReseniasComponent } from './pages/resenias/resenias.component';
+import { ContactoComponent } from "./pages/contacto/contacto.component";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +16,9 @@ import { InsumosInformaticosComponent } from "./pages/insumos-informaticos/insum
     WhatsappButtonComponent,
     ServicioTecnicoComponent,
     AccesoriosComponent,
-    InsumosInformaticosComponent
+    InsumosInformaticosComponent,
+    ReseniasComponent,
+    ContactoComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
