@@ -20,7 +20,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         </div>
         <div class="info-text">
           <h3>Dirección:</h3>
-          <p>Av. Principal #123</p>
+          <p>Tte. Gral. Donato Alvarez 8720</p>
         </div>
       </div>
       
@@ -30,8 +30,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         </div>
         <div class="info-text">
           <h3>Horario:</h3>
-          <p>Lun - Vier 8am - 17pm</p>
-          <p>Sáb 8am - 13pm</p>
+          <p>Lun - Sab</p>
+          <p>9 - 13 y 17 - 20:30</p>
         </div>
       </div>
       
@@ -41,7 +41,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         </div>
         <div class="info-text">
           <h3>Teléfono:</h3>
-          <p>123456789112</p>
+          <p><a href="tel:351-4327161" class="info-item">351-4327161 </a></p>
         </div>
       </div>
       
@@ -51,7 +51,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         </div>
         <div class="info-text">
           <h3>Instagram:</h3>
-          <p>instagram</p>
+          <p> <a href="https://www.instagram.com/cellsolutions.oficial/?hl=es-la" target="_blank" class="info-item">cellsolutions.oficial</a> </p>
         </div>
       </div>
       

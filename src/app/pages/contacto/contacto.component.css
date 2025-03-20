@@ -88,7 +88,16 @@
 .info-text p {
   font-size: 14px;
   color: #666;
-  line-height: 1.4;
+  line-height: 1.1;
+
+  a {
+    color: #666;
+    text-decoration: none;
+  }
+
+  .info-item:hover {
+    color: var(--sc-color);
+  }
 }
 
 /* Newsletter */

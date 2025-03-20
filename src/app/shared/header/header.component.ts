@@ -1,19 +1,19 @@
-import { Component, ElementRef, signal, ViewChild } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ElementRef, HostListener, signal, ViewChild } from '@angular/core';
+import { CommonModule, ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule ],
   template: `
     <header>
       <div class="top-bar">
         <div class="contact-info">
-          <a href="tel:123-456-7890" class="info-item">
-            <span class="icon"> <i class="i-phone"></i></span> 123-456-7890
+          <a href="tel:351-4327161" class="info-item">
+            <span class="icon"> <i class="i-phone"></i></span> 351-4327161
           </a>
-          <a href="https://instagram.com" target="_blank" class="info-item">
-            <span class="icon"><i class="i-instagram"></i></span> instagram
+          <a href="https://www.instagram.com/cellsolutions.oficial/?hl=es-la" target="_blank" class="info-item">
+            <span class="icon"><i class="i-instagram"></i></span> cellsolutions.oficial
           </a>
           <span class="info-item">
             <span class="icon"><i class="i-clock"></i></span> Lun - Vier 8am - 17pm, Sáb 8am - 13pm
@@ -25,10 +25,10 @@ import { CommonModule } from '@angular/common';
           <img src="/img/logo_cs.png" alt="Cell Solutions" />
         </div>
         <div class="nav-links" [class.active]="menuOpen()">
-          <a href="/servicio-tecnico">Servicio técnico</a>
-          <a href="/accesorios">Accesorios</a>
-          <a href="/insumos">Insumos informáticos</a>
-          <a href="/contacto">Contacto</a>
+          <a (click)="scrollToSection('servicio-tecnico')" class="nav-link">Servicio técnico</a>
+          <a (click)="scrollToSection('accesorios')" class="nav-link">Accesorios</a>
+          <a (click)="scrollToSection('insumos')" class="nav-link">Insumos informáticos</a>
+          <a (click)="scrollToSection('contacto')" class="nav-link">Contacto</a>
         </div>
         <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
           <span [class.open]="menuOpen()"></span>
@@ -84,6 +84,7 @@ import { CommonModule } from '@angular/common';
   styles: [`
     header {
       width: 100%;
+      padding-top: 82px;
     }
 
     .icon {
@@ -117,7 +118,7 @@ import { CommonModule } from '@angular/common';
       padding: 8px 0;
       border-bottom: 1px solid #eee;
       display: flex;
-      justify-content: center;
+      justify-content: center;      
     }
 
     .contact-info {
@@ -142,7 +143,7 @@ import { CommonModule } from '@angular/common';
     .info-item:hover {
       color: var(--sc-color);
     }
-
+    
     .main-nav {
       background-color: var(--pc-color);
       padding: 16px;
@@ -150,8 +151,12 @@ import { CommonModule } from '@angular/common';
       justify-content: space-between;
       align-items: center;
       margin: 0 auto;
-      position: relative;
-    }
+      position: fixed; 
+      top: 0; 
+      left: 0;
+      width: 100%; 
+      z-index: 1000; 
+    }    
 
     .logo img {
       height: 50px;
@@ -169,10 +174,29 @@ import { CommonModule } from '@angular/common';
       text-decoration: none;
       font-size: 16px;
       font-weight: 500;
-      transition: color 0.3s ease;
+      transition: all 0.3s ease;
+      position: relative;
+    
     }
 
-    .nav-links a:hover {
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--sc-color);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active-link::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active-link {
       color: var(--sc-color);
     }
 
@@ -259,12 +283,15 @@ import { CommonModule } from '@angular/common';
 
       .nav-links.active {
         right: 0;
-        // top: 6rem;
       }
 
-      .nav-links a {
+      .nav-link a {
         padding: 10px 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .nav-link a::after {
+        display: none;
       }
     }
 
@@ -285,11 +312,21 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {  
   menuOpen = signal(false);
+  activeSectionId = signal('');
+
+  constructor(private viewportScroller: ViewportScroller) {}
+
+  
 
   toggleMenu() {
     this.menuOpen.update(state => !state);
   }
 
-  
-  
+  scrollToSection(sectionId: string) {    
+    this.viewportScroller.scrollToAnchor(sectionId);
+    // Cerrar el menú móvil si está abierto
+    if (this.menuOpen()) {
+      this.toggleMenu();
+    }
+  }
 }
