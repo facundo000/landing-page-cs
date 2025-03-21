@@ -5,7 +5,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   imports: [],
   template: `  
   <div class="contacto-container">
-  <h1 class="contacto-titulo">Contacto</h1>
+  <h2 class="contacto-titulo">Contacto</h2>
   
   <div class="contacto-content">
     <div class="contacto-mapa">

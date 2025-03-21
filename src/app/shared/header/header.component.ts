@@ -45,7 +45,7 @@ import { CommonModule, ViewportScroller } from '@angular/common';
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active carousel-img">
-            <img src="/img/carousel-1.webp" class="d-block w-100 img-1 carousel-overlay" alt="...">
+            <img src="/img/reparacion-cel.webp" class="d-block w-100 img-1" alt="Insumos informáticos">
             <div class="carousel-caption d-none d-md-block">
               <h4>Reparación de Celulares</h4>
               <p>Servicio técnico profesional specializado en telefonía móvil</p>
@@ -53,7 +53,7 @@ import { CommonModule, ViewportScroller } from '@angular/common';
           </div>
 
           <div class="carousel-item carousel-img">
-            <img src="/img/items.gif" class="d-block w-100 img-2 carousel-overlay" alt="...">
+            <img src="/img/carousel-2.webp" class="d-block w-100 img-2" alt="Accesorios para celulares">
             <div class="carousel-caption d-none d-md-block">
               <h4>Venta de Accesorios</h4>
               <p>Fundas, Case Space magnética y más</p>
@@ -61,7 +61,7 @@ import { CommonModule, ViewportScroller } from '@angular/common';
           </div>
 
           <div class="carousel-item carousel-img">
-            <img src="/img/caousel-3.png" class="d-block w-100 carousel-img img-2 carousel-overlay" alt="...">
+            <img src="/img/carousel-3.png" class="d-block w-100 carousel-img img-2" style="background-color: var(--sc-color);" alt="Insumos Informáticos">
             <div class="carousel-caption d-none d-md-block">
               <h4>Insumos Informáticos</h4>
               <p>Kit Gamer Noganet, Smartwatches y mucho más</p>
@@ -207,6 +207,7 @@ import { CommonModule, ViewportScroller } from '@angular/common';
       cursor: pointer;
       padding: 10px;
       z-index: 100;
+      color: black;
     }
 
     .menu-toggle span {
@@ -216,7 +217,7 @@ import { CommonModule, ViewportScroller } from '@angular/common';
       background-color: white;
       margin: 5px 0;
       transition: all 0.3s ease;
-    }
+    }    
 
     .menu-toggle span.open:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
@@ -230,18 +231,42 @@ import { CommonModule, ViewportScroller } from '@angular/common';
       transform: rotate(-45deg) translate(7px, -6px);
     }
 
-    .carousel-img {
-      height: 20rem;      
+    // .carousel-img {
+    //   height: 20rem;      
       
-      .img-1 {
-        height: 58rem;    
-        filter: brightness(0.5) contrast(1.3) saturate(0.8);
-      }
+    //   .img-1 {
+    //     height: 58rem;
+    //     filter: brightness(0.5) contrast(1.3) saturate(0.8);
+    //   }
 
-      .img-2{
-        filter: brightness(0.5) contrast(1.3) saturate(0.8);
-      }
-    }
+    //   .img-2{
+    //     filter: brightness(0.5) contrast(1.3) saturate(0.8);
+    //   }
+    // }
+
+    .carousel-item {
+  position: relative;
+  aspect-ratio: 16/9;
+  max-height: 80vh;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Primera imagen - enfoque en parte superior */
+.carousel-item.active .img-1 {
+  object-position: top;
+}
+
+/* Segunda y tercera imagen - centrado completo */
+.carousel-item .img-2,
+.carousel-item .img-3 {
+  object-position: center;
+}
+
 
     @media (max-width: 768px) {
       .contact-info {
@@ -270,16 +295,39 @@ import { CommonModule, ViewportScroller } from '@angular/common';
         z-index: 99;
       }
 
-      .carousel-img {
-      height: 20rem;
+    //   .carousel-img {
+    //   height: 20rem;
 
-      .img-1 {
-        height: auto;
-      }
-      .img-2 {
-        height: 100%
-      }
-    }
+    //   .img-1 {
+    //     height: auto;
+    //   }
+    //   .img-2 {        
+    //     height: 100%;
+    //   }
+    // }
+    .carousel-item {
+    aspect-ratio: 3/4;
+    max-height: 60vh;
+  }
+
+  /* Primer item - altura completa sin recorte */
+  .carousel-item.active .img-1 {
+    object-fit: contain;
+    object-position: top;
+    background-color: #000; /* Fondo para espacios vacíos */
+  }
+
+  /* Ajuste de controles para móvil */
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: 45%;
+    transform: translateY(-50%);
+  }
+
+  .carousel-caption {
+    bottom: 15%;
+    padding: 10px;
+  }
 
       .nav-links.active {
         right: 0;
@@ -307,6 +355,25 @@ import { CommonModule, ViewportScroller } from '@angular/common';
       .logo img {
         height: 40px;
       }
+
+      // .carousel-img {
+      //   aling-item: center;
+      // }
+      // .img-2 {
+      //   height: 70% !important;
+      // }
+      .carousel-item {
+    max-height: 50vh;
+  }
+
+  .carousel-caption h4 {
+    font-size: 1.1rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.8rem;
+  }
+
     }
   `]
 })

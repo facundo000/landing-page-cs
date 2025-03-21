@@ -44,14 +44,15 @@ h1 {
 }
 
 h3 {
-  color: var(--font-color);
+  color: var(--font-color2);
   margin-bottom: 15px;
   font-size: 20px;
 }
 
 p {
-  color: var(--font-color);
+  color: var(--font-color2);
   line-height: 1.6;
+  padding: 1.5rem;
 }
 
 @media (max-width: 768px) {

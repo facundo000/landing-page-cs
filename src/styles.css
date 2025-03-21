@@ -20,7 +20,7 @@
     padding: 0;
     overflow: auto;
     min-height: 100vh;
-    background: linear-gradient(0deg, rgba(36,18,34,1) 8%, rgba(72,41,110,1) 42%, rgb(91, 50, 124) 100%) fixed;
+    background: #fde8ff;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -38,7 +38,8 @@
   }
 
   :root{
-    --pc-color: #2B2A4D;
-    --sc-color: #ff9924;
-    --font-color: #fff;
+    --pc-color: #2B2A4D;    
+    --sc-color: #DE4AD4;
+    --font-color: #000000;
+    --font-color2: #fff;
   }
