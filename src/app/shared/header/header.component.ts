@@ -53,7 +53,7 @@ import { CommonModule, ViewportScroller } from '@angular/common';
           </div>
 
           <div class="carousel-item carousel-img">
-            <img src="/img/carousel-2.webp" class="d-block w-100 img-2" alt="Accesorios para celulares">
+            <img src="/img/carousel-2.webp" class="d-block w-100 img-2 accesorios" alt="Accesorios para celulares">
             <div class="carousel-caption d-none d-md-block">
               <h4>Venta de Accesorios</h4>
               <p>Fundas, Case Space magnética y más</p>
@@ -234,10 +234,10 @@ import { CommonModule, ViewportScroller } from '@angular/common';
     // .carousel-img {
     //   height: 20rem;      
       
-    //   .img-1 {
-    //     height: 58rem;
-    //     filter: brightness(0.5) contrast(1.3) saturate(0.8);
-    //   }
+      .img-1 {
+        height: 58rem;
+        filter: brightness(0.5) contrast(1.3) saturate(0.8);
+      }
 
     //   .img-2{
     //     filter: brightness(0.5) contrast(1.3) saturate(0.8);
@@ -250,10 +250,13 @@ import { CommonModule, ViewportScroller } from '@angular/common';
   max-height: 80vh;
 }
 
-.carousel-item img {
+.carousel-inner img {
+  filter: brightness(0.5) contrast(1.3) saturate(0.8);
+}
+
+.carousel-item .img-2 {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 /* Primera imagen - enfoque en parte superior */
@@ -283,7 +286,7 @@ import { CommonModule, ViewportScroller } from '@angular/common';
         display: flex;
         flex-direction: column;
         position: fixed;
-        top: 6.5rem;
+        top: 1.5rem;
         right: -300px;
         width: 250px;
         height: 100vh;
@@ -295,15 +298,9 @@ import { CommonModule, ViewportScroller } from '@angular/common';
         z-index: 99;
       }
 
-    //   .carousel-img {
-    //   height: 20rem;
-
-    //   .img-1 {
-    //     height: auto;
-    //   }
-    //   .img-2 {        
-    //     height: 100%;
-    //   }
+      .img-2 {        
+        height: 100%;        
+      }
     // }
     .carousel-item {
     aspect-ratio: 3/4;
@@ -356,12 +353,10 @@ import { CommonModule, ViewportScroller } from '@angular/common';
         height: 40px;
       }
 
-      // .carousel-img {
-      //   aling-item: center;
-      // }
-      // .img-2 {
-      //   height: 70% !important;
-      // }
+      .accesorios{
+        width: 32.3rem !important;
+      }
+
       .carousel-item {
     max-height: 50vh;
   }
