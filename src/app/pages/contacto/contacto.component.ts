@@ -49,7 +49,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         <div class="icon-container">
           <i class="icon instagram-icon"></i>
         </div>
-        <div class="info-text">
+        <div class="info-text">            
           <h3>Instagram:</h3>
           <p> <a href="https://www.instagram.com/cellsolutions.oficial/?hl=es-la" target="_blank" class="info-item">cellsolutions.oficial</a> </p>
         </div>
