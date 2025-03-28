@@ -4,17 +4,17 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-insumos-informaticos',
   imports: [],
   template: `
-  <section>
+  <section id="insumos">
     <h2>Insumos Informáticos</h2>
     <div class="products">
       <div class="card">
-        <img src="/img/microfono-parlante.jpg" alt="Microfono Karaoke">
+        <img src="/img/microfono-parlante.webp" alt="Microfono Karaoke">
         <div class="card-content">
           <h3>Microfono Karaoke</h3>
         </div>
       </div>
       <div class="card">
-        <img src="/img/mando-ps4.jpg" alt="mando ps4">
+        <img src="/img/mando-ps4.webp" alt="mando ps4">
         <div class="card-content">
           <h3>Joystick ps4</h3>
         </div>

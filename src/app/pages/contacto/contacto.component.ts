@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-contacto',
   imports: [],
   template: `  
-  <div class="contacto-container">
+  <section id="contacto" class="contacto-container">
   <h2 class="contacto-titulo">Contacto</h2>
   
   <div class="contacto-content">
@@ -66,7 +66,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       </div>
     </div>
   </div>
-</div>
+</section>
   `,
   styleUrl: './contacto.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -6,7 +6,7 @@ import { GalleriaModule } from 'primeng/galleria';
   imports: [GalleriaModule],
   standalone: true,
   template: `
-  <section>
+  <section id="accesorios">
     <h2>Accesorios</h2>
     <div class="card">
      <p-galleria [value]="images()" [responsiveOptions]="responsiveOptions" 
@@ -82,5 +82,4 @@ export class AccesoriosComponent {
       },
     ]);
   }
-
- }
+}
