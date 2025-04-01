@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-whatsapp-button',
   imports: [],
   template: ` 
-  <a href="https://wa.me/3514327161" 
+  <a href="https://wa.me/5493517871598" 
          class="whatsapp-button" 
          target="_blank"
          aria-label="Contactar por WhatsApp">
