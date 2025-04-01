@@ -2,7 +2,8 @@ footer {
   background: var(--pc-color);
   height: 4rem;
   width: 100%;
-  padding-bottom: 82px;
+  /* padding-bottom: 82px; */
+  padding: 1.5rem;
 }
 
 .footer-content{
@@ -10,9 +11,11 @@ footer {
   justify-content: center;
   align-items: center;
   font-size: 12px;
+  width: 100%;
 
   a {
     text-decoration: none;
     color: var(--sc-color);
+
   }
 }

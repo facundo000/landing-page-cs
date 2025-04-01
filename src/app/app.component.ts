@@ -10,9 +10,11 @@ import { ContactoComponent } from "./pages/contacto/contacto.component";
 import { FooterComponent } from "./shared/footer/footer.component";
 import { ScrollTopComponent } from './shared/scroll-top/scroll-top.component';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [
     RouterOutlet,
     HeaderComponent,
@@ -23,8 +25,9 @@ import { trigger, transition, style, animate } from '@angular/animations';
     ReseniasComponent,
     ContactoComponent,
     FooterComponent,
-    ScrollTopComponent
-],
+    ScrollTopComponent,
+    AnimateOnScrollModule
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   animations: [

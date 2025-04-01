@@ -7,7 +7,7 @@ import { CommonModule, ViewportScroller } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <header>
+    <header id="home">
       <div class="top-bar">
         <div class="contact-info">
           <a href="tel:351-4327161" class="info-item">
@@ -22,9 +22,11 @@ import { CommonModule, ViewportScroller } from '@angular/common';
         </div>
       </div>
       <nav class="main-nav">
+      <a (click)="scrollToSection('home')" >
         <div class="logo">
           <img src="/img/logo_cs.webp" alt="Cell Solutions" />
         </div>
+      </a>  
         <div class="nav-links" [class.active]="menuOpen()">
           <a (click)="scrollToSection('servicio-tecnico')" 
              class="nav-link" 

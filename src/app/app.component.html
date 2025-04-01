@@ -1,9 +1,9 @@
-<app-header></app-header>
-<app-servicio-tecnico  id="servicio-tecnico"></app-servicio-tecnico>
-<app-accesorios id="accesorios"></app-accesorios>
-<app-insumos-informaticos id="insumos"></app-insumos-informaticos>
-<app-resenias></app-resenias>
-<app-contacto id="contacto"></app-contacto>
+<app-header id="home"></app-header>
+<app-servicio-tecnico id="servicio-tecnico"></app-servicio-tecnico>
+<app-accesorios pAnimateOnScroll enterClass="fadein" leaveClass="fadeout" [threshold]="0.1" [once]="false" id="accesorios"></app-accesorios>
+<app-insumos-informaticos pAnimateOnScroll enterClass="fadein" leaveClass="fadeout" [threshold]="0.1" [once]="false" id="insumos"></app-insumos-informaticos>
+<app-resenias pAnimateOnScroll enterClass="fadein" leaveClass="fadeout" [threshold]="0.1" [once]="false"></app-resenias>
+<app-contacto pAnimateOnScroll enterClass="fadein" leaveClass="fadeout" [threshold]="0.1" [once]="false" id="contacto"></app-contacto>
 <app-footer></app-footer>
 <app-whatsapp-button></app-whatsapp-button>
 <router-outlet />
