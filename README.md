@@ -35,7 +35,8 @@ Once the server is running, open your browser and navigate to `http://localhost:
 
 ## Projects Links
 [Web Site](https://landing-page-cs-five.vercel.app)
-[video demostration](https://youtu.be/0GqxezGEx8M)
+
+[Video Demostration](https://youtu.be/0GqxezGEx8M)
 
 
 ## Additional Resources
