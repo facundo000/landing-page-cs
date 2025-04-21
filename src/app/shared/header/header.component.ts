@@ -10,11 +10,11 @@ import { CommonModule, ViewportScroller } from '@angular/common';
     <header id="home">
       <div class="top-bar">
         <div class="contact-info">
-          <a href="tel:351-4327161" class="info-item">
-            <span class="icon"> <i class="i-phone"></i></span> 351-4327161
+          <a href="tel:351-1235160" class="info-item">
+            <span class="icon"> <i class="i-phone"></i></span> 351-1235160
           </a>
           <a href="https://www.instagram.com/cellsolutions.oficial/?hl=es-la" target="_blank" class="info-item">
-            <span class="icon"><i class="i-instagram"></i></span> cellsolutions.oficial
+            <span class="icon"><i class="i-instagram"></i></span> cs
           </a>
           <span class="info-item">
             <span class="icon"><i class="i-clock"></i></span> Lun - Vier 8am - 17pm, Sáb 8am - 13pm
@@ -56,7 +56,7 @@ import { CommonModule, ViewportScroller } from '@angular/common';
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active carousel-img">
-            <img src="/img/reparacion-cel.webp" class="d-block w-100 img-1" alt="Insumos informáticos">
+            <img src="/img/reparacion-cel.png" class="d-block w-100 img-1" alt="Insumos informáticos">
             <div class="carousel-caption  d-md-block">
               <h4>Reparación de Celulares</h4>
               <p>Servicio técnico profesional specializado en telefonía móvil</p>
@@ -260,7 +260,7 @@ import { CommonModule, ViewportScroller } from '@angular/common';
 
     .carousel-item.active .img-1 {
       object-position: top;
-      margin-top: -10%;
+      margin-top: 0%;
       transition: all 0.3s ease;
     }
 

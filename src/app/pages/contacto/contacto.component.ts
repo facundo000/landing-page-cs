@@ -9,7 +9,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   
   <div class="contacto-content">
     <div class="contacto-mapa">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.3656137422995!2d-64.27345628939612!3d-31.32127447419851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329c41239e2343%3A0x78f1535c02d6674d!2sCell%20Solutions!5e0!3m2!1ses!2sar!4v1742410419607!5m2!1ses!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">    
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80629.66514111281!2d-64.27675926507142!3d-31.364068737465953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432986a21909a5d%3A0x62cf8a2deb9618bc!2sCS%20ELECTRONICA!5e0!3m2!1ses!2sar!4v1745085286175!5m2!1ses!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">    
       </iframe>
     </div>
     
@@ -20,7 +20,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         </div>
         <div class="info-text">
           <h3>Dirección:</h3>
-          <p>Tte. Gral. Donato Alvarez 8720</p>
+          <p>Mariano Fragueiro 2263 </p>
         </div>
       </div>
       
@@ -41,7 +41,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         </div>
         <div class="info-text">
           <h3>Teléfono:</h3>
-          <p><a href="tel:351-4327161" class="info-item">351-4327161 </a></p>
+          <p><a href="tel:351-1235160" class="info-item">351-1235160 </a></p>
         </div>
       </div>
       
@@ -51,7 +51,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         </div>
         <div class="info-text">            
           <h3>Instagram:</h3>
-          <p> <a href="https://www.instagram.com/cellsolutions.oficial/?hl=es-la" target="_blank" class="info-item">cellsolutions.oficial</a> </p>
+          <p> <a href="https://www.instagram.com/" target="_blank" class="info-item">&#64; cs</a> </p>
         </div>
       </div>
       
