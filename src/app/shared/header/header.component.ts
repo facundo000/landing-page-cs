@@ -56,7 +56,7 @@ import { CommonModule, ViewportScroller } from '@angular/common';
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active carousel-img">
-            <img src="/img/reparacion-cel.png" class="d-block w-100 img-1" alt="Insumos informáticos">
+            <img src="/img/reparacion-cel.webp" class="d-block w-100 img-1" alt="Insumos informáticos">
             <div class="carousel-caption  d-md-block">
               <h4>Reparación de Celulares</h4>
               <p>Servicio técnico profesional specializado en telefonía móvil</p>
