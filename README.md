@@ -1,6 +1,6 @@
-# CellSolutions
+# CS
 
-CellSolutions is a landing page project built with Angular, showcasing services, products, and contact information for a mobile solutions business.
+CS is a landing page project built with Angular, showcasing services, products, and contact information for a mobile solutions business.
 
 ## Table of Contents
 - [Getting Started](#getting-started)
