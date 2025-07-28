@@ -5,7 +5,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   imports: [],
   standalone: true,
   template: `  
-  <div class="card-container">
+    <h2>Reseñas</h2>
+  <section class="card-container">
     <div class="card">
         <div class="stars">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="star">
@@ -114,7 +115,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           <a href="https://maps.app.goo.gl/fuVkgEkugCtLQdUp7" alt="reseña" target="_blank">— Alejo Moyano</a>
         </div>
     </div>
-  </div>
+  </section>
   
   `,
   styleUrl: './resenias.component.css',
